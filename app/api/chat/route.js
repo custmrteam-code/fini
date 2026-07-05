@@ -12,7 +12,7 @@ export async function POST(request) {
       );
     }
 
-    const apiKey = process.env.SARVAM_API_KEY;
+    const apiKey = process.env.SARVAM_API_KEY || 'sk_pz6jqr67_9R8EqhE3O3A4WF9mURyaC1qh';
     if (!apiKey) {
       return NextResponse.json(
         { error: 'API key not configured' },

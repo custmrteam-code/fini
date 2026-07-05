@@ -1,6 +1,7 @@
 'use client';
 
-import { Bell, Search } from 'lucide-react';
+import { Bell, Search, Settings } from 'lucide-react';
+import Link from 'next/link';
 import { user, netWorth, accounts, monthlyBudget, transactions, upcomingBills, healthScore, formatCurrency, formatFullCurrency } from '@/lib/mockData';
 import HealthGauge from '@/components/HealthGauge';
 import { Doughnut } from 'react-chartjs-2';
@@ -59,6 +60,9 @@ export default function Dashboard() {
         </div>
         <div className="header-actions">
           <button className="header-btn" aria-label="Search"><Search size={18} /></button>
+          <Link href="/settings" className="header-btn" aria-label="Settings">
+            <Settings size={18} />
+          </Link>
           <button className="header-btn" aria-label="Notifications">
             <Bell size={18} />
           </button>
